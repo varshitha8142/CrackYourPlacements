@@ -11,11 +11,9 @@ class node:
 class Solution:
     def display(self,node):
         #code here
-        while(node):
+        while node is not None:
             print(node.data,end=" ")
             node=node.next
-    
-    
 
 
 #{ 
