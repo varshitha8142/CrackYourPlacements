@@ -10,7 +10,7 @@ class Solution:
         odd=head
         even=odd.next
         evenh=even
-        while even and even.next:
+        while  even and even.next!=None:
             odd.next=even.next
             odd=odd.next
             even.next=odd.next
