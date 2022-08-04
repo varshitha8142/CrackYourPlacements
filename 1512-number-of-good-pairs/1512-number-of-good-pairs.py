@@ -1,12 +1,9 @@
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
-        a=nums
-        d={}
-        c=0
+        x=[]
+        a=list(set(nums))
         for i in range(len(a)):
-            if a[i] in d:
-                d[a[i]]+=1
-                c+=d[a[i]]
-            else:
-                d[a[i]]=0
-        return c
+            a1=nums.count(a[i])-1
+            b=(a1*(a1+1))//2
+            x.append(b)
+        return sum(x)
