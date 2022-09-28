@@ -10,13 +10,12 @@ class Solution:
         while  fast and fast.next:
             slow=slow.next
             fast=fast.next.next
-            if slow==fast: break
-        else: return None
-        fast=head
-        while(fast!=slow):
-            slow=slow.next
-            fast=fast.next
-        return fast
+            if slow==fast:
+                fast=head
+                while(fast!=slow):
+                    slow=slow.next
+                    fast=fast.next
+                return fast
 
                 
         
