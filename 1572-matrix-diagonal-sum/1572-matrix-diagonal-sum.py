@@ -4,7 +4,7 @@ class Solution:
         i=0;s=0
         while(i<len(mat)):
             if a==b:
-                s-=mat[i][a]
+                s-=mat[i][b]
             s+=mat[i][a]+mat[i][b]
             a+=1
             b-=1
