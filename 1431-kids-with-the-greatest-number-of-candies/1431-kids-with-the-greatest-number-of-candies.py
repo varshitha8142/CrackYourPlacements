@@ -1,14 +1,11 @@
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-        j=0
-        x=[]
-        for i in candies:
-            candies[j]=i+extraCandies
-            if max(candies)==candies[j]:
-                x.append(True)
+        x=max(candies)
+        a=[]
+        for i in range(len(candies)):
+            if candies[i]+extraCandies>=x:
+                a.append(True)
             else:
-                x.append(False)
-            candies[j]=candies[j]-extraCandies
-            j+=1
-        return x
+                a.append(False)
+        return a
             
