@@ -13,9 +13,7 @@ class Solution:
             slow=slow.next
         a=(c-n)
         if a==0:
-            temp = head
             head = head.next
-            temp = None
             return head
         while fast:
             d+=1
