@@ -1,9 +1,8 @@
 class Solution:
     def reverseBits(self, n: int) -> int:
         x=''
-        x1=0
-        i=0
-        while (n>=1):
+        i=0;x1=0
+        while n>=1:
             n1=n%2
             n=n//2
             x+=str(n1)
