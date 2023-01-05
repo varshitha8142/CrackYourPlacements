@@ -1,6 +1,7 @@
 class Solution:
     def reverseBits(self, n: int) -> int:
         x=''
+        x1=0
         i=0
         while (n>=1):
             n1=n%2
@@ -8,7 +9,9 @@ class Solution:
             x+=str(n1)
         if len(x)!=32:
             x=x+('0'*(32-len(x)))
-        return (int(x,2))
-        
+        while i<len(x):
+            x1+=int(x[-i-1])*(2**i)
+            i+=1
+        return x1
        
         
