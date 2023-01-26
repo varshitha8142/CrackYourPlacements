@@ -6,7 +6,4 @@ class Solution:
                 d[i]=1
             else:
                 d[i]+=1
-        i=list(d.values())
-        j=list(d.keys())
-        a=i.index(max(i))
-        return(j[a])
+        return max(zip(d.values(), d.keys()))[1]
