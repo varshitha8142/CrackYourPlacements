@@ -1,9 +1,10 @@
 class Solution:
     def isPowerOfFour(self, n: int) -> bool:
-        if n>0:
-            k=log10(n)/log10(4)
-            if type(k)==int or str(k)==str(int(k))+'.0':
-                return True
-        else:
+        if n<=0:
             return False
-        
+        if n%4!=0 and n!=1:
+            return False
+        if  n==1:
+            return True
+            
+        return self.isPowerOfFour(n//4)
